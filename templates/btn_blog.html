@@ -1,0 +1,22 @@
+{% extends 'includes/main.html' %}
+
+{% load static %}
+
+{% block title%}
+Detail
+{% endblock %}
+
+{% block content %}
+<center>
+    <div class="" style="width: 50%;">
+        <img src="/media/{{ blog.img }}" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Title: {{blog.title}}</h5>
+          <p class="card-text"><h4>Descriptioni :</h4>{{blog.description | safe}}</p>
+          <div style="display: flex;justify-content: space-between;">
+              <a href="{% url 'blog_page'%}" class="btn btn-primary px-4 mx-auto my-2 ">Back</a>
+          </div>
+        </div>
+    </div>
+</center>
+{% endblock%}
